@@ -1,0 +1,105 @@
+
+body {
+    font-family: Manrope;
+    line-height: 1.6;
+    font-size: 18px;
+    background-color: #002b36;
+    color: #93a1a1;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    animation: fadein 1.5s;
+    -webkit-animation: fadein 1.5s;
+    position: absolute;
+    max-height: 100%;
+    height: 1500px; /* Used to enable scrolling */
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+p,
+h2, 
+h5,
+h6 {
+    width: 100%;
+}
+
+h2,
+h5,
+h6 {
+    line-height: 1.2
+}
+
+.ids ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link,
+a:hover,
+a:active {
+    color: #81a2be;
+}
+
+
+#fancyheader::before {
+	content: "$ ";
+}
+@media (prefers-reduced-motion: no-preference) {
+	@keyframes flash {
+		50% { opacity: 0; }
+	}
+	@keyframes reveal {
+		from { width: 2em; } /* Width of ::before */
+		  to { width: 100%; }
+	}
+	#fancyheader {
+		overflow: hidden;
+		white-space: nowrap;
+		animation: reveal 4s linear;
+		text-overflow: " █";
+	}
+	#fancyheader::after {
+		content: " █";
+		animation: flash 0.5s step-end infinite;
+	}
+}
+
+
+a:visited {
+    color: #de935f;
+}
+
+.text {
+
+  max-width: 500px;
+  margin: auto;
+}
